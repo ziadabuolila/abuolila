@@ -1,0 +1,566 @@
+::-webkit-scrollbar{
+    width: 10px;
+    background: rgba(0, 0, 0, 0);
+}
+::-webkit-scrollbar-thumb{
+    width: 10px;
+    background: radial-gradient(#11a9af, #1c1c1c);
+    border-radius: 25px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui;
+    font-weight: bold;
+    background-color: #f4f4f4;
+}
+.loader{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+.load-place{
+    background: #ccc;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 8px solid #11a9af;
+    border-top-color: #ccc;
+    border-bottom-color: #ccc;
+    animation: abuolila infinite linear 1.8s;
+}
+.load-place + img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+@keyframes abuolila{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 2px solid #11a9af;
+    position: sticky;
+    top: 0;
+    background-color: #f4f3f3;
+    z-index: 999;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.bar{
+    width: 100%;
+    background: #fff;
+    color: #000;
+    height: 40px;
+    position: sticky;
+    top: 73px;
+    z-index: 99;
+    font-size: 16px;
+    overflow: hidden;
+    font-weight: bold;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 1.1);
+}
+.bar > .ads-bar{
+    position: absolute;
+    animation: ruler 29s infinite linear;
+    width: 600px;
+    margin-top: 4px;
+}
+@keyframes ruler{
+    0%{
+        right: 100%;
+    }
+    100%{
+        right: -880px;
+    }
+}
+.contact-button{
+    border: none;
+    border-top: 2px solid #11a9af;
+    border-bottom: 2px solid #11a9af;
+    transition: background-color 0.5s ease;
+    animation: button 2s infinite;
+    padding: 55px;
+    margin-top: 75px;
+    width: 55%;
+}
+.contact-button:hover{
+    background-color: #11a9af;
+    color: #1c1c1c;
+    border-radius: 10px;
+    animation: none;
+}
+a{
+    color: #000;
+}
+a:hover{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+    color: #000;
+}
+@media (max-width: 390px) {
+    #me {
+        margin-top: -90px;
+        margin-bottom: 35px;
+    }
+    .contact-button {
+        margin: 30px auto;
+        font-size: 15px;
+    }
+    .typing-container {
+        font-size: 26px !important;
+    }
+    .link, .account{
+        margin-bottom: 15px !important;
+    }
+}
+@keyframes button {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+button > a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+button > a:hover{
+    text-decoration: none;
+    color: #000;
+}
+.dropdown-menu > li > a{
+    text-decoration: none;
+    color: #000;
+}
+.dropdown-menu > li > a:hover{
+    text-decoration: none;
+    color: #000;
+}
+.img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.img p{
+    margin-top: 14px;
+    font-size: 18px;
+}
+img{
+    width: 70px;
+}
+button .btn .btn-gray.dropdown-toggle {
+    font-weight: bold;
+}
+.p-4{
+    width: 250px;
+}
+.account{
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 12px;
+}
+/* home */
+section {
+    margin-top: 90px;
+    margin-bottom: 200px;
+    padding: 18px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+section.home > div#div:first-child{
+    width: 355px !important;
+}
+.name{
+    display: flex;
+}
+.typing-container{
+    width: 100%;
+    font-size: 28px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-left: 4px solid #000;
+    animation: typing 3s steps(22) forwards, blink 0.7s infinite;
+}
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to{
+        width: 13.3ch;
+    }
+}
+@keyframes blink{
+    50%{
+        border-color: transparent;
+    }
+}
+.job p{
+    color: #11a9af;
+    font-size: 50px;
+    animation: slideInOut 3s ease-in-out infinite;
+    text-align: right;
+}
+.container-fluid > div {
+    display: flex;
+    gap: 50px;
+}
+.social-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+.icon-first{
+    color: #13b770;
+}
+.icon-facebook{
+    color: #2f2fff;
+}
+.brand a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+.brand a:hover {
+    transform: scale(1.1);
+}
+.brand svg {
+    width: 40px;
+    height: 40px;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 390px) {
+    .container-fluid > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .job p {
+        font-size: 47px;
+    }
+    #img {
+        margin-top: -85px !important;
+    }
+}
+@media (max-width: 375px) {
+    section{
+        margin-top: 75px;
+    }
+    .job p {
+        font-size: 50px;
+    }
+}
+.title {
+    font-size: 80px;
+    opacity: 0.10;
+    position: absolute;
+    margin-top: -30px;
+    left: 50%;
+    font-weight: bolder;
+    transform: translate(-50%);
+}
+.title-cont h2 {
+    font-size: 60px;
+    text-shadow: 3px 3px 3px #11a9af;
+}
+#img{
+    width: 100%;
+    height: 500px;
+    margin-top: -200px;
+    animation: bounce 2s infinite;
+}
+/* about */
+.contaainer {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1c1c1c;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    margin-top: 40px;
+    animation: fadeIn 2s ease-in-out;
+    margin-bottom: 315px;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.about{
+    text-align: center;
+    margin-top: 10px;
+    font-size:  large;
+    font-weight: bold;
+    color: #11a9af;
+}
+.lang{
+    text-align: right;
+    font-size:  x-large;
+    color: #11a9af;
+    margin-top: 60px;
+}
+.language{
+    text-align: center;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 80px;
+    flex-wrap: wrap;
+    animation: fadeIn 3s ease-in-out;
+}
+.div1 {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border: 2px solid;
+    padding: 10px;
+    border-radius: 20px;
+    transition: transform 0.5s ease;
+}
+.div1:hover{
+    transform: scale(1.1);
+}
+.div1 i{
+    font-size: xx-large;
+}
+.div1 span a{
+    text-decoration: none;
+}
+#html{
+    color: #d78b01;
+    font-size: large;
+    animation: bounce 3s infinite;
+}
+#html:hover{
+    color: #ffa500;
+    font-size: large;
+    text-decoration: none;
+    animation: none;
+}
+#css{
+    color: #0245a4;
+    font-size: large;
+    animation: bounce 2.5s infinite;
+}
+#css:hover{
+    color: #0069ff;
+    font-size: large;
+    text-decoration: none;
+    animation: none;
+}
+#js{
+    color: #c6c601;
+    font-size: large;
+    animation: bounce 3s infinite;
+}
+#js:hover{
+    color: #ffff00;
+    font-size: large;
+    text-decoration: none;
+    animation: none;
+}
+#php{
+    color: #623c01;
+    font-size: large;
+    animation: bounce 2.5s infinite;
+}
+#php:hover{
+    color: #905700;
+    font-size: large;
+    text-decoration: none;
+    animation: none;
+}
+#sql{
+    color: #cfbc8f;
+    font-size: large;
+    animation: bounce 3s infinite;
+}
+#sql:hover{
+    color: #ffe7ae;
+    font-size: large;
+    text-decoration: none;
+    animation: none;
+}
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/* contact */
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 1.1);
+    width: 95%;
+    height: 100%;
+    margin-top: 40px;
+    animation: fadeIn 2s ease-in-out;
+    border-radius: 50px;
+    flex-wrap: wrap;
+}
+.img-ziad {
+    width: 300px;
+    margin-bottom: 30px;
+}
+#me{
+    border-radius: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 1.1);
+    gap: 20px;
+    padding: 25px;
+    background-color: #fff;
+    animation: bounce 2.5s infinite;
+}
+#me:hover{
+    animation: none;
+}
+hr{
+    width: 100%;
+    border: 2px solid #11a9af;
+}
+.content{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.fields{
+    margin-bottom: 90px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 1.1);
+    padding: 20px;
+    border-radius: 30px;
+    animation: bounce 2.5s infinite;
+}
+.fields:hover{
+    animation: none;
+}
+.fields > .send > .check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fields > .field {
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+.fields > .field {
+    position: relative;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+.fields > .field input , select{
+    width: 275px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+.fields > .field label{
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    padding: 0 5px;
+    color: #000;
+    font-size: 16px;
+    transition: 0.3s;
+    pointer-events: none;
+    text-align: center;
+    font-weight: bold;
+}
+.fields > .field select:not(:placeholder-shown) + label,
+.fields > .field input:not(:placeholder-shown) + label, 
+.fields > .field textarea:focus + label, 
+.fields > .field textarea:not(:placeholder-shown) + label, 
+.fields > .field input:focus + label {
+    top: -2px;
+    background-color: #fff;
+    color: #000;
+}
+.employee-btns .btns{
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+.employee .btns .btn{
+    width: 50%;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #11a9af;
+    color: #1c1c1c;
+    margin-top: 30px;
+    font-size: 17px;
+    font-family: Arial, sans-serif;
+    position: sticky;
+    bottom: 0;
+}
+footer p {
+    margin: 0;
+}
