@@ -27,6 +27,6 @@ document.querySelector(".submit").addEventListener("click", function (event) {
     if (email === "" || password1 === "" || password2 === "") {
         alert("برجاء ملئ الحقول أولاً");
     } else {
-        window.location.href = "file:///G:/ziad/person/login/registered_by.html";
+        window.location.href = "file:///G:/ziad/person/ar/index.html";
     }
 });
