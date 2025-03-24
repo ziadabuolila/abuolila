@@ -19,14 +19,22 @@ pass_2.onkeyup = function () {
     }
 }
 // open
-document.querySelector(".submit").addEventListener("click", function (event) {
+document.querySelector('.button.submit').addEventListener('click', function (event) {
     event.preventDefault();
-    const email = document.getElementById("mail").value.trim();
-    const password1 = document.getElementById("pass_1").value.trim();
-    const password2 = document.getElementById("pass_2").value.trim();
-    if (email === "" || password1 === "" || password2 === "") {
-        alert("برجاء ملئ الحقول أولاً");
-    } else {
-        window.location.href = "file:///G:/ziad/person/ar/index.html";
+    const emailElem = document.getElementById('mail');
+    const pass1Elem = document.getElementById('pass_1');
+    const pass2Elem = document.getElementById('pass_2');
+    const email = emailElem ? emailElem.value.trim() : '';
+    const pass1 = pass1Elem ? pass1Elem.value.trim() : '';
+    const pass2 = pass2Elem ? pass2Elem.value.trim() : '';
+    if (email === '' || pass1 === '') {
+        alert('برجاء إدخال بياناتك أولاً.');
+        return;
     }
+    const lastCheck = document.querySelector('.lastcheck');
+    if (lastCheck && !lastCheck.classList.contains('d-none') && pass1 !== pass2) {
+        alert('كلمات المرور غير متطابقة.');
+        return;
+    }
+    window.location.href = 'file:///G:/ziad/person/ar/index.html';
 });
